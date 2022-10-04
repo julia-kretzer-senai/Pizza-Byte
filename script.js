@@ -699,7 +699,7 @@ btnBebida?.addEventListener('click', function(e) {
     if (softEscolhida == 'NENHUMA' && bebidaAlcoolicaEscolhida == 'NENHUMA') {
         localStorage.setItem('total-bebida', 0);
     } else {
-        localStorage.setItem('total-bebida', (totalBebida-totalDoceBebidaSomar-totalSalgadaBebidaSomar).toFixed(2));
+        localStorage.setItem('total-bebida', (totalSoft+totalAlcoolica).toFixed(2));
     }
 
     // definindo quando vai para a pagina seguinte
