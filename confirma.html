@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>PizzaByte | Finalizar pedido</title>
+    <link rel="icon" type="image/x-icon" href="/img/pizza.ico">
+</head>
+<body onload="imprimirConfirma()">
+    <header>
+        <nav>
+            <a href="cardapio.html" class="nav-btn" id="cardapio-header">cardápio</a>
+            <a href="index.html"  class="logo">        
+                <img src="img/pizzabyte.png" alt="logo">
+            </a>
+            <a href="salgada.html" class="nav-btn" id="pedido-header">pedido</a>
+        </nav>
+    </header>
+    <main>
+        <div id="confirma-bg">
+            <div class="confirma-produto" id="confirma-salgada">
+                <h2 class="title-categoria" id="title-confirma-salgada">salgada</h2>
+                <div id="bloco-confirma-salgada">
+                    <div class="confirma-tamanho">
+                        <h3>tamanho: </h3>
+                        <p id="confirma-tamanho-salgada" class="confirma-margem"c></p>
+                    </div>
+                    <div class="confirma-sabor">
+                        <h3>sabores: </h3>
+                        <div class="confirma-margem">
+                            <p id="confirma-sabor1-salgada"></p>
+                            <p id="confirma-sabor2-salgada"></p>
+                            <p id="confirma-sabor3-salgada"></p>
+                            <p id="confirma-sabor4-salgada"></p>
+                        </div>
+                    </div>
+                    <div class="confirma-borda">
+                        <h3>borda recheada? </h3>
+                        <p id="confirma-borda-salgada" class="confirma-margem"></p>
+                    </div>
+                </div>
+                <p class="confirma-subtotal" id="confirma-subtotal-salgada"></p>
+            </div>
+            <div class="confirma-produto" id="confirma-doce">
+                <h2 class="title-categoria" id="title-confirma-doce">doce</h2>
+                <div id="bloco-confirma-doce">
+                    <div class="confirma-tamanho">
+                        <h3>tamanho: </h3>
+                        <p id="confirma-tamanho-doce" class="confirma-margem"c></p>
+                    </div>
+                    <div class="confirma-sabor">
+                        <h3>sabores: </h3>
+                        <div class="confirma-margem">
+                            <p id="confirma-sabor1-doce"></p>
+                            <p id="confirma-sabor2-doce"></p>
+                            <p id="confirma-sabor3-doce"></p>
+                            <p id="confirma-sabor4-doce"></p>
+                        </div>
+                    </div>
+                    <div class="confirma-borda">
+                        <h3>borda recheada? </h3>
+                        <p id="confirma-borda-doce" class="confirma-margem"></p>
+                    </div>
+                </div>
+                <p class="confirma-subtotal" id="confirma-subtotal-doce"></p>
+            </div>
+            <div class="confirma-produto" id="confirma-bebida">
+                <h2 class="title-categoria" id="title-confirma-bebida">bebida</h2>
+                <div id="bloco-confirma-bebida">
+                    <div class="confirma-soft">
+                        <h3 id="confirma-soft"></h3>
+                        <div class="tamanho-bebida" id="div-soft">
+                            <h3>tamanho: </h3>
+                            <p id="confirma-tamanho-soft"></p>
+                        </div>
+                    </div>
+                    <div class="confirma-alcoolica">
+                        <h3 id="confirma-alcoolica"></h3>
+                        <div class="tamanho-bebida" id="div-alcoolica">
+                            <h3>tamanho: </h3>
+                            <p id="confirma-tamanho-alcoolica"></p>
+                        </div>
+                    </div>
+                </div>
+                <p class="confirma-subtotal" id="confirma-subtotal-bebida"></p>
+            </div>
+        </div>
+        <div class="confirma-dados">
+            <p id="confirma-nome"></p>
+            <p id="confirma-email"></p>
+            <p id="confirma-endereco"></p>
+            <p id="confirma-telefone"></p>
+        </div>
+        <div class="abaixo">
+            <div class="entrega">
+                <input type="radio" value="entrega" name="entrega">
+                <label for="entrega">entrega</label>
+                <input type="radio" value="retirada" name="entrega" class="retirada">
+                <label for="retirada">retirada</label>
+            </div>
+            <div class="total">
+                <h3>total: </h3>
+                <p id="total"></p>
+            </div>
+            <div class="btn-confirma-container">
+                <a href="dados.html" class="btn-confirma" id="voltar-confirma">voltar</a>
+                <a href="final.html" class="btn-confirma" id="finalizar">finalizar</a>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

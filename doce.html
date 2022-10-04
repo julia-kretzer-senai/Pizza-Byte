@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>PizzaByte | Pizza doce</title>
+    <link rel="icon" type="image/x-icon" href="/img/pizza.ico">
+</head>
+<body onload="imprimirDoce()">
+    <header>
+        <nav>
+            <a href="cardapio.html" class="nav-btn" id="cardapio-header">cardápio</a>
+            <a href="index.html"  class="logo">        
+                <img src="img/pizzabyte.png" alt="logo">
+            </a>
+            <a href="salgada.html" class="nav-btn" id="pedido-header">pedido</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="title-pedido">pedido</h1>
+        <div id="pedido-doce" class="pedido-bg">
+            <h2>doce</h2>
+            <div class="opcoes">
+            <div class="coluna1">
+                <h3>tamanho:</h3>
+                <select name="tamanho-doce" id="tamanho-doce" required>
+                    <option value="" disabled selected>selecione o tamanho</option>
+                    <option value="p">P R$44,90</option>
+                    <option value="m">M R$74,90</option>
+                    <option value="g">G R$94,90</option>
+                    <option value="gg">GG R$124,90</option>
+                    <option value="nenhuma">não quero pizza doce</option>
+                </select>
+                <div class="borda">
+                    <h3>borda recheada?</h3>
+                    <input type="radio" name="borda" value="sim" id="doce-sim" disabled>
+                    <label for="sim">sim R$9,90</label><br>
+
+                    <input type="radio" name="borda" value="nao" id="doce-nao" disabled>
+                    <label for="nao">não</label>
+                </div>
+            </div>
+            <div class="coluna2">
+                <h3>sabores:</h3>
+                <select name="sabor1" id="sabor1" class="sabor" disabled>
+                    <option value="" disabled selected>sabor 1</option>
+                    <option value="preto">chocolate preto</option>
+                    <option value="branco">chocolate branco</option>
+                    <option value="dois-amores">dois amores</option>
+                    <option value="cafe-com-leite">café com leite</option>
+                    <option value="sensacao">sensação</option>
+                    <option value="banana">banana nevada</option>
+                </select>
+                <select name="sabor2" id="sabor2" class="sabor" disabled>
+                    <option value="" disabled selected>sabor 2</option>
+                    <option value="preto">chocolate preto</option>
+                    <option value="branco">chocolate branco</option>
+                    <option value="dois-amores">dois amores</option>
+                    <option value="cafe-com-leite">café com leite</option>
+                    <option value="sensacao">sensação</option>
+                    <option value="banana">banana nevada</option>
+                </select>
+                <select name="sabor3" id="sabor3" class="sabor" disabled>
+                    <option value="" disabled selected>sabor 3</option>
+                    <option value="preto">chocolate preto</option>
+                    <option value="branco">chocolate branco</option>
+                    <option value="dois-amores">dois amores</option>
+                    <option value="cafe-com-leite">café com leite</option>
+                    <option value="sensacao">sensação</option>
+                    <option value="banana">banana nevada</option>
+                </select>
+                <select name="sabor4" id="sabor4" class="sabor" disabled>
+                    <option value="" disabled selected>sabor 4</option>
+                    <option value="preto">chocolate preto</option>
+                    <option value="branco">chocolate branco</option>
+                    <option value="dois-amores">dois amores</option>
+                    <option value="cafe-com-leite">café com leite</option>
+                    <option value="sensacao">sensação</option>
+                    <option value="banana">banana nevada</option>
+                </select>
+            </div>
+            <div class="coluna3">
+                <div class="subtotal">
+                    <h3>subtotal: </h3>
+                    <p id="doce-subtotal"></p>
+                </div>
+                
+                <div class="btn-pedido-container">
+                    <a href="salgada.html" class="btn-pedido" id="doce-voltar">voltar</a>
+                    <a href="bebida.html" class="btn-pedido" id="doce-continuar">continuar</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>     

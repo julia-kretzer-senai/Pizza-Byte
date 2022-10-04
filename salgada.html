@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>PizzaByte | Pizza salgada</title>
+    <link rel="icon" type="image/x-icon" href="/img/pizza.ico">
+</head>
+<body onload="imprimirSalgada()">
+    <header>
+        <nav>
+            <a href="cardapio.html" class="nav-btn" id="cardapio-header">cardápio</a>
+            <a href="landing.html"  class="logo">        
+                <img src="img/pizzabyte.png" alt="logo">
+            </a>
+            <a href="salgada.html" class="nav-btn" id="pedido-header">pedido</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="title-pedido">pedido</h1>
+        <div id="pedido-salgada" class="pedido-bg">
+            <h2>salgada</h2>
+            <div class="opcoes">
+                <div class="coluna1">
+                    <h3>tamanho:</h3>
+                    <select name="tamanho-salgada" id="tamanho-salgada" required>
+                        <option value="" disabled selected>selecione o tamanho</option>
+                        <option value="p">P R$44,90</option>
+                        <option value="m">M R$74,90</option>
+                        <option value="g">G R$94,90</option>
+                        <option value="gg">GG R$124,90</option>
+                        <option value="nenhuma">não quero pizza salgada</option>
+                    </select>
+                    <div class="borda">
+                        <h3>borda recheada?</h3>
+                        <input type="radio" name="borda" value="sim" id="salgada-sim" disabled>
+                        <label for="sim">sim R$9,90</label><br>
+
+                        <input type="radio" name="borda" value="nao" id="salgada-nao" disabled> 
+                        <label for="nao">não</label>
+                    </div>
+                </div>
+                <div class="coluna2">
+                    <h3>sabores:</h3>
+                    <select name="sabor1" id="sabor1" class="sabor" disabled required>
+                        <option value="" disabled selected>sabor 1</option>
+                        <option value="marguerita">marguerita</option>
+                        <option value="portuguesa">portuguesa</option>
+                        <option value="strogonoff">strogonoff</option>
+                        <option value="do-chef">do chef</option>
+                        <option value="calabresa">calabresa</option>
+                        <option value="alcatra">alcatra</option>
+                        <option value="pepperoni">pepperoni</option>
+                        <option value="bacon">bacon</option>
+                        <option value="mussarela">mussarela</option>
+                        <option value="4-queijos">4 queijos</option>
+                        <option value="milho">milho</option>
+                        <option value="doritos">doritos</option>
+                    </select>
+                    <select name="sabor2" id="sabor2" class="sabor" disabled>
+                        <option value="" disabled selected>sabor 2</option>
+                        <option value="marguerita">marguerita</option>
+                        <option value="portuguesa">portuguesa</option>
+                        <option value="strogonoff">strogonoff</option>
+                        <option value="do-chef">do chef</option>
+                        <option value="calabresa">calabresa</option>
+                        <option value="alcatra">alcatra</option>
+                        <option value="pepperoni">pepperoni</option>
+                        <option value="bacon">bacon</option>
+                        <option value="mussarela">mussarela</option>
+                        <option value="4-queijos">4 queijos</option>
+                        <option value="milho">milho</option>
+                        <option value="doritos">doritos</option>
+                    </select>
+                    <select name="sabor3" id="sabor3" class="sabor" disabled>
+                        <option value="" disabled selected>sabor 3</option>
+                        <option value="marguerita">marguerita</option>
+                        <option value="portuguesa">portuguesa</option>
+                        <option value="strogonoff">strogonoff</option>
+                        <option value="do-chef">do chef</option>
+                        <option value="calabresa">calabresa</option>
+                        <option value="alcatra">alcatra</option>
+                        <option value="pepperoni">pepperoni</option>
+                        <option value="bacon">bacon</option>
+                        <option value="mussarela">mussarela</option>
+                        <option value="4-queijos">4 queijos</option>
+                        <option value="milho">milho</option>
+                        <option value="doritos">doritos</option>
+                    </select>
+                    <select name="sabor4" id="sabor4" class="sabor" disabled>
+                        <option value="" disabled selected>sabor 4</option>
+                        <option value="marguerita">marguerita</option>
+                        <option value="portuguesa">portuguesa</option>
+                        <option value="strogonoff">strogonoff</option>
+                        <option value="do-chef">do chef</option>
+                        <option value="calabresa">calabresa</option>
+                        <option value="alcatra">alcatra</option>
+                        <option value="pepperoni">pepperoni</option>
+                        <option value="bacon">bacon</option>
+                        <option value="mussarela">mussarela</option>
+                        <option value="4-queijos">4 queijos</option>
+                        <option value="milho">milho</option>
+                        <option value="doritos">doritos</option>
+                    </select>
+                </div>
+                <div class="coluna3">
+                    <div class="subtotal">
+                        <h3>subtotal: </h3>
+                        <p id="salgada-subtotal"></p>
+                    </div>
+                        <a href="#" class="btn-pedido" id="salgada-continuar">continuar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

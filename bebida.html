@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>PizzaByte | Bebida</title>
+    <link rel="icon" type="image/x-icon" href="/img/pizza.ico">
+</head>
+<body onload="imprimirBebida()">
+    <header>
+        <nav>
+            <a href="cardapio.html" class="nav-btn" id="cardapio-header">cardápio</a>
+            <a href="index.html"  class="logo">        
+                <img src="img/pizzabyte.png" alt="logo">
+            </a>
+            <a href="salgada.html" class="nav-btn" id="pedido-header">pedido</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="title-pedido">pedido</h1>
+        <div id="pedido-bebida">
+            <h2>bebida</h2>
+            <div id="conteudo-bebida">
+                <div class="soft">
+                    <h3>soft drinks</h3>
+                    <div class="selecoes-bebida">
+                        <select name="soft" id="soft">
+                            <option value="soft drink" disabled selected>soft drink</option>
+                            <option value="pepsi">pepsi</option>
+                            <option value="pepsi-zero">pepsi zero</option>
+                            <option value="gurana">guaraná</option>
+                            <option value="fanta">fanta laranja</option>
+                            <option value="agua">água sem gás</option>
+                            <option value="agua-gas">água com gás</option>
+                            <option value="nenhuma">não quero soft drinks</option>
+                        </select>
+                        <input type="radio" value="2" name="tamanho-soft" id="tamanho1" disabled>
+                        <label for="2l">2L <div class="espaco"> </div> R$12,90</label>
+                        <input type="radio" value="600" name="tamanho-soft" id="tamanho2" disabled>
+                        <label for="600">600mL <div class="espaco"> </div> R$8,90</label>
+                        <input type="radio" value="lata" name="tamanho-soft" id="tamanho3" disabled>
+                        <label for="lata">lata <div class="espaco"> </div> R$5,90</label>
+                    </div>
+                </div>
+                <div class="alcoolica">
+                    <h3>alcoólicas</h3>
+                    <div class="selecoes-bebida">
+                        <select name="alcoolica" id="alcoolica" id="select-alcoolica">
+                            <option value="alcoolica" disabled selected>alcoólica</option>
+                            <option value="cerveja">cerveja</option>
+                            <option value="ice">smirnoff ice</option>
+                            <option value="beats">skol beats</option>
+                            <option value="nenhuma">não quero bebida alcoólica</option>
+                        </select>
+                        <input type="radio" value="long" name="tamanho-alcoolica" id="tamanho4" disabled>
+                        <label for="long">long neck <div class="espaco"> </div> R$11,90</label>
+                    </div>
+                </div>
+                <div class="subtotal-bebida">
+                    <div class="subtotal-bebida-container">
+                        <h3>subtotal: </h3>
+                        <p id="bebida-subtotal"></p>
+                    </div>
+                    
+                    <div id="btn-pedido-container-bebida">
+                        <a href="doce.html" class="btn-bebida" id="bebida-voltar">voltar</a>
+                        <a href="#" class="btn-bebida" id="bebida-continuar">continuar</a>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

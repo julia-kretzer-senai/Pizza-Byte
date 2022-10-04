@@ -1,0 +1,758 @@
+/* fonte */
+
+@import url('https://fonts.googleapis.com/css2?family=Anaheim&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+/* todas as páginas */
+
+body {
+    background-color: #070024;
+    font-family: 'Anaheim';
+    color: #f2f2f2;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    position: asbolute;
+    background-color: #070024;
+}
+
+header a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+    font-size: 250%;
+}
+
+#cardapio-header {
+    margin-top: 1.5%;
+    position: absolute;
+    left: 0pt;
+    top: 0pt;
+}
+
+#pedido-header {
+    margin-top: 1.5%;
+    position: absolute;
+    right: 0pt;
+    top: 0pt;
+}
+
+.logo {
+    display: inline;
+    margin: 0 0;
+    padding: 0;
+}
+
+.logo img {
+    width: 35%;
+}
+
+/* landing page */
+
+.content {
+    display: flex;
+}
+
+#main-landing {
+    margin-top: 10%;
+    width: 74%;
+    padding: 0 5%;
+}
+
+.title {
+    font-size: 312.5%;
+    width: 800px;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 32px;
+    margin-left: 22%; 
+}
+
+.btn {
+    width: 295px;
+    padding: 1%;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    border: 3px solid;
+    border-radius: 5px;
+    font-size: 250%;
+    text-decoration: none;
+}
+
+#cardapio-btn {
+    background-color: #ffdf00;
+    margin-right: 50%;
+    color: #000;
+    border-color: #ffa500;
+}
+
+#pedido-btn {
+    margin-top: 2%;
+    background-color: #e12c2c;
+    border-color: #a70b0b;
+    color: #f2f2f2;
+}
+
+#aside-landing {
+    position: fixed;
+    right: 0pt;
+    bottom: 0pt;
+    width: 288px;
+    padding: 40px;
+}
+
+.detalhe {
+    width: 280px;
+    float: right;
+}
+
+/* cardapio */
+
+.main-cardapio {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 3%;
+}
+
+.cardapio-title {
+    width: 100%;
+    text-align: center;
+    font-size: 500%;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+}
+
+.secao-titulo {
+    font-size: 312.5%;
+    width: 23%;
+    float: left;
+    padding-left: 40px;
+    margin-top: 5%;
+}
+
+#destaque {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+}
+
+#destaque-container {
+    display: flex;
+    text-align: center;
+    width: 71.6%;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.sabor-destaque {
+    width: 256px;
+    height: 192px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.sabor-destaque h3 {
+    font-size: 150%;
+}
+
+#chef {
+    background-color: #ffa500;
+}
+
+#calabresa {
+    background-color: #e12c2c;
+}
+
+#alcatra {
+    background-color: #a70b0b;
+}
+
+.img {
+    width: 185px;
+    height: 124px;
+    border: white dashed 2px;
+    margin-top: 16px;
+}
+
+.opcoes-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 250%;
+    justify-content: space-evenly;
+    width: 71%;
+    margin-right: 40px;
+    border-radius: 5px;
+    margin-top: 5%;
+}
+
+#salgadas-container {
+    background-color: #ffa500;
+}
+
+#doces-container {
+    background-color: #e12c2c;
+}
+
+#bebidas-container {
+    background-color: #a70b0b;
+}
+
+.sabor {
+    margin: 2% 5%;
+}
+
+#bebidas {
+    margin-bottom: 50px;
+}
+
+/* dados */
+
+#main-dados {
+    padding-top: 10%;
+    color: black;
+    width: 50%;
+    aspect-ratio: 2/1;
+    background-color: #ffdf00;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-dados h2 {
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-size: 250%;
+    width: 100%;
+    height: 10%;
+    margin: 2% 0 5% 0;
+    text-align: center;
+}
+
+.labels {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.inputs {
+    width: 50%;
+}
+
+/* salgada e doce */
+
+.title-pedido {
+    font-size: 312.5%;
+    width: 100%;
+    margin: 2% 0 1% 0;
+    text-align: center;
+}
+
+.pedido-bg {
+    width: 84%;
+    margin: 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.pedido-bg h2 {
+    width: 100%;
+    font-size: 300%;
+    font-weight: 600;
+    margin: 2% 0;
+    color: #070024;
+}
+
+.opcoes {
+    width: 100%;
+    display: flex;
+    padding-bottom: 2%;
+}
+
+.pedido-bg h3 {
+    text-align: start;
+    margin: 0;
+    font-weight: 600;
+    font-size: 160%;
+}
+
+.coluna1, .coluna2, .coluna3 {
+    color: #070024;
+    width: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: start;
+    font-size: 150%;
+    font-weight: 600;
+}   
+
+.coluna2 {
+    height: 100%;
+}
+
+.coluna2 select, .coluna1 select {
+    margin: 15px 0 10px 0;
+    width: 80%;
+    aspect-ratio: 10/1;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #979797;
+    font-family: 'Source Sans Pro';
+    font-size: 80%;
+    padding: 1%;
+}
+
+.coluna3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna3 h3 {
+    margin-bottom: 2%;
+}
+
+#nao {
+    margin-top: 5%;
+}
+
+.borda h3 {
+    margin: 12% 0 5% 0;
+}
+
+.subtotal {
+    display: flex;
+    margin: 17.5% 0;
+}
+
+.btn-pedido {
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    padding: 2.5% 7.5%;
+    font-weight: 600;
+    width: 40%;
+}
+
+.subtotal p {
+    margin-left: 5%;
+    font-size: 150%;
+    font-weight: 600;
+}
+
+/* salgada */
+
+#pedido-salgada {
+    background-color: #ffa500;
+}
+
+#salgada-continuar {
+    margin: 0 0 0 30%;
+    background-color:#e12c2c;
+    border: solid 3px #a70b0b;
+    color: white;
+}
+
+/* doce */
+
+#pedido-doce {
+    background-color: #e12c2c;
+}
+
+#pedido-doce h2, #pedido-doce h3, #pedido-doce .coluna1, #pedido-doce .coluna3 {
+    color: #f2f2f2;
+}
+
+#btn-pedido-container {
+    display: flex;
+}
+
+#doce-voltar {
+    margin: 0 5% 0 15%;
+    background-color: #ffa500;
+    border: solid 3px #ffa500;
+    color: #070024;
+}
+
+#doce-continuar {
+    background-color: #ffdf00;
+    border: solid 3px #ffa500;
+    color: #070024;
+}
+
+/* bebida */
+
+#pedido-bebida {
+    width: 84%;
+    background-color: #a70b0b;
+    margin: 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0 5%;
+    padding-bottom: 3%;
+}
+
+#pedido-bebida h2 {
+    width: 100%;
+    font-size: 300%;
+    font-weight: 600;
+    margin: 2% 0 0 0;
+}
+
+.conteudo-bebida {
+    width: 100%;
+    display: flex;
+}
+
+.soft, .alcoolica, .subtotal-bebida {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+.soft h3, .alcoolica h3, .subtotal-bebida-container {
+    font-size: 200%;
+    font-weight: 600;
+    width: 100%;
+    text-align: start;
+    margin-bottom: 1%;
+}
+
+.selecoes-bebida {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selecoes-bebida select {
+    margin: 5px 10px 5px 0;
+    width: 30%;
+    aspect-ratio: 10/1;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #979797;
+    font-family: 'Source Sans Pro';
+    font-size: 100%;
+}
+
+.soft input, .alcoolica input {
+    margin-right: 1%;
+}
+
+.soft label, .alcoolica label {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1%;
+    font-weight: 400;
+    font-size: 150%;
+    width: 18%;
+}
+
+.espaco {
+    width: 10%;
+}
+
+.subtotal-bebida {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+}
+
+.subtotal-bebida-container {
+    width: 20%;
+    display: flex;
+    padding-left: 25%;
+}
+
+#bebida-subtotal {
+    margin-left: 5%;
+}
+
+#btn-pedido-container-bebida {
+    width: 30%;
+    height: 20%;
+    padding-left: 7%;
+}
+
+.btn-bebida {
+    text-decoration: none;
+    font-size: 150%;
+    background-color: #ffa500;
+    border: solid 3px #ffa500;
+    border-radius: 5px;
+    color: #070024;
+    font-weight: 600;
+    padding: 2.5% 7.5%;
+    margin: 4% 3%;
+}
+
+#bebida-continuar {
+    background-color: #ffdf00;
+    color: #070024;
+}
+
+/* dados */
+
+#dados {
+    color: black;
+    width: 630px;
+    background-color: #ffdf00;
+    margin: 3% auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+#dados h2 {
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-size: 250%;
+    width: 100%;
+    height: 10%;
+    margin: 2% 0 2% 0;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.labels {
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    font-size: 150%;
+    padding-right: 2%;
+    font-weight: 600;
+}
+
+.labels label {
+    margin: 10.3% 0;
+}
+
+.inputs {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+
+.inputs input {
+    width: 375px;
+    height: 30px;
+    margin: 4.8% 0;
+    border: none;
+    border-radius: 3px;
+}
+
+.inputs input::placeholder {
+    font-family: 'Anaheim';
+}
+
+.btn-dados-container {
+    display: flex;
+    width: 100%;
+}
+
+.dados-btn {
+    color: #f2f2f2;
+    background-color: #e12c2c;
+    border: #a70b0b 3px solid;
+    border-radius: 5px;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-size: 180%;
+    width: 25%;
+    margin: 1.9% 0 2% 0;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 2% 3%;
+    text-align: center;
+}
+
+#voltar-btn {
+    width: 15%;
+    background-color: #a70b0b;
+    margin: auto 5% auto 22.5%;
+} 
+
+/* confirma */
+
+#confirma-bg {
+    width: 90%;
+    margin: 4% 5% 0 5%;
+    display: flex;
+}   
+
+.confirma-produto {
+    padding: 1% 2%;
+    width: 33%;
+    font-size: 150%;
+}
+
+#confirma-salgada {
+    background-color: #ffa500;
+    border-radius: 5px 0 0 0;
+}
+
+#confirma-doce {
+    background-color: #e12c2c;
+}
+
+#confirma-bebida {
+    background-color: #a70b0b;
+    border-radius: 0 5px 0 0;
+}
+
+.title-categoria {
+    font-size: 200%;
+    margin-bottom: 2%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.confirma-produto h3 {
+    font-weight: 600;
+}
+
+.confirma-tamanho, .confirma-sabor, .confirma-borda {
+    display: flex;
+}
+
+.confirma-margem {
+    margin-left: 5%;
+}
+
+.confirma-subtotal {
+    text-align: center;
+    font-weight: 600;
+    font-size: 150%;
+    margin-top: 2%;
+}
+
+.confirma-dados {
+    width: 90%;
+    padding: 2% 0;
+    background-color: #ffdf00;
+    color: #000;
+    font-weight: 600;
+    border-radius: 0 0 5px 5px;
+    margin: 0 5% 0 5%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 120%;
+}
+
+.tamanho-bebida {
+    display: flex;
+    margin-bottom: 5%;
+}
+
+.tamanho-bebida p {
+    margin-left: 5%;
+}
+
+#confirma-subtotal-bebida {
+    margin-top: 10.5%;
+}
+
+.abaixo {
+    width: 90%;
+    margin: 3% 5% 0 5%;
+    display: flex;
+    text-align: center;
+}
+
+.entrega, .btn-confirma-container {
+    width: 33%;
+}
+
+.entrega label {
+    font-size: 200%;
+}
+
+.retirada {
+    margin-left: 8%;
+}
+
+.total {
+    width: 17.5%;
+    padding: 0 7.75% 0 7.75%;
+    display: flex;
+    font-weight: 600;
+    font-size: 200%;
+}
+
+#total {
+    margin-left: 5%;
+    padding-right: 0;
+}
+
+.btn-confirma {
+    text-align: center;
+    text-decoration: none;
+    color: #f2f2f2;
+    border: #a70b0b 3px solid;
+    border-radius: 5px;
+    padding: 2% 7.5%;
+    font-size: 180%;
+    margin-left: 3%;
+    background-color: #a70b0b;
+    font-weight: 600;
+}
+
+#finalizar {
+    background-color: #e12c2c;
+}
+
+/* final */
+
+.final-html {
+    padding: 2%;
+}
+
+#main-final {
+    width: 100%;
+    text-align: center;
+    font-size: 200%;
+}
+
+#main-final h1 {
+    font-size: 230%;
+    font-weight: 600;
+    margin-bottom: 3%;
+}
+
+#main-final h3 {
+    margin: 1% 0 0 0;
+}
+
+#logo-final {
+    width: 23%;
+}
