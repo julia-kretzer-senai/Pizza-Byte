@@ -493,7 +493,7 @@ btnDoce?.addEventListener('click', function(e) {
 
 // botao
 
-let bebidaBtn = document.querySelector('#bebida-continuar');
+let btnBebida = document.querySelector('#bebida-continuar');
 
 // variaveis
 
@@ -501,6 +501,8 @@ let soft = document.querySelector('#soft');
 let alcoolica = document.querySelector('#alcoolica');
 let subtotalBebida = document.querySelector('#bebida-subtotal');
 let totalBebida = 0;
+let totalSoft = 0;
+let totalAlcoolica = 0;
 let iAlcoolica = 0;
 let iSoft = 0;
 let tamanho1 = document.querySelector('#tamanho1');
@@ -513,10 +515,32 @@ let tamanho4 = document.querySelector('#tamanho4');
 function imprimirBebida() {
     let totalSalgada = localStorage.getItem('total-salgada');
     let totalDoce = localStorage.getItem('total-doce');
+
     let totalSalgadaSomar = parseFloat(totalSalgada);
     let totalDoceSomar = parseFloat(totalDoce);
-    totalBebida += totalDoceSomar + totalSalgadaSomar;
-    subtotalBebida.innerHTML = totalBebida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    
+    let totalBebida = totalSalgadaSomar + totalDoceSomar;
+    
+    // iSoft = 0;
+    // iAlcoolica = 0;
+
+    if (tamanho1.checked == false && tamanho2.checked == false && tamanho3.checked == false && tamanho4.checked == false) {
+        totalSoft = 0;
+    }
+
+    if (totalSoft == 0 && totalAlcoolica == 0) {
+        subtotalBebida.innerHTML = totalBebida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    } else if (totalSoft == 0 && totalAlcoolica != 0) {
+        totalBebida += totalAlcoolica;
+        subtotalBebida.innerHTML = totalBebida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    } else if (totalSoft != 0 && totalAlcoolica == 0) {
+        totalBebida += totalSoft;
+        subtotalBebida.innerHTML = totalBebida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    } else {
+        totalBebida += totalSoft + totalAlcoolica;
+        subtotalBebida.innerHTML = totalBebida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+
 }
 
 // funcoes disable
@@ -524,17 +548,26 @@ function imprimirBebida() {
 soft?.addEventListener('change', function(e) {
     e.preventDefault();
 
+    totalSoft = 0;
+    
     if (soft.options[soft.selectedIndex].value == 'nenhuma') {
         tamanho1.disabled = true;
         tamanho2.disabled = true;
         tamanho3.disabled = true;
-        totalBebida = 0;
-        imprimirBebida();
+        totalSoft = 0;
+        iSoft = 0;
     } else {
         tamanho1.disabled = false;
         tamanho2.disabled = false;
         tamanho3.disabled = false;
     }
+
+    tamanho1.checked = false;
+    tamanho2.checked = false;
+    tamanho3.checked = false;
+
+    imprimirBebida();
+
 });
 
 alcoolica?.addEventListener('change', function(e) {
@@ -542,84 +575,62 @@ alcoolica?.addEventListener('change', function(e) {
 
     if (alcoolica.options[alcoolica.selectedIndex].value == 'nenhuma' && iAlcoolica > 0) {
         tamanho4.disabled = true;
-        totalBebida -= 11.9;
+        totalAlcoolica -= 11.9;
         iAlcoolica = 0;
     } else if (alcoolica.options[alcoolica.selectedIndex].value == 'nenhuma') {
         tamanho4.disabled = true;
+        totalAlcoolica = 0;
     } else if (alcoolica.options[alcoolica.selectedIndex].value != 'nenhuma' && iAlcoolica == 0) {
         iAlcoolica = 0;
         tamanho4.checked = true;
         tamanho4.disabled = false;
-        totalBebida += 11.9;
+        totalAlcoolica += 11.9;
         iAlcoolica++;
     }
 
-    subtotalBebida.innerHTML = totalBebida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    imprimirBebida();
 });
 
 tamanho1?.addEventListener('change', function(e) {
     e.preventDefault();
 
-    if (tamanho1.checked == true && tamanho2.checked == false && tamanho3.checked == false && iSoft == 0) {
-        totalBebida += 12.9;
-        iSoft = 1;
-    } else if (tamanho1.checked == true && tamanho2.checked == false && tamanho3.checked == false && iSoft == 2) {
-        totalBebida += 12.9 - 8.9;
-        iSoft = 1;
-    } else if (tamanho1.checked == true && tamanho2.checked == false && tamanho3.checked == false && iSoft == 3) {
-        totalBebida += 12.9 - 5.9;
-        iSoft = 1;
-    }
+    totalSoft = 0;
+    totalSoft += 12.9;
 
-    subtotalBebida.innerHTML = totalBebida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    imprimirBebida();
 
 });
 
 tamanho2?.addEventListener('change', function(e) {
     e.preventDefault();
 
-    if (tamanho1.checked == false && tamanho2.checked == true && tamanho3.checked == false && iSoft == 0) {
-        totalBebida += 8.9;
-        iSoft = 2;
-    } else if (tamanho1.checked == false && tamanho2.checked == true && tamanho3.checked == false && iSoft == 1) {
-        totalBebida -= 4;
-        iSoft = 2;
-    } else if (tamanho1.checked == false && tamanho2.checked == true && tamanho3.checked == false && iSoft == 3) {
-        totalBebida += 3;
-        iSoft = 2;
-    }
+    totalSoft = 0;
+    totalSoft += 8.9;
 
-    subtotalBebida.innerHTML = totalBebida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    imprimirBebida();
 
 });
 
 tamanho3?.addEventListener('change', function(e) {
     e.preventDefault();
 
-    if (tamanho1.checked == false && tamanho2.checked == false && tamanho3.checked == true && iSoft == 0) {
-        totalBebida += 5.9;
-        iSoft = 3;
-    } else if (tamanho1.checked == false && tamanho2.checked == false && tamanho3.checked == true && iSoft == 1) {
-        totalBebida -= 7;
-        iSoft = 3;
-    } else if (tamanho1.checked == false && tamanho2.checked == false && tamanho3.checked == true && iSoft == 2) {
-        totalBebida -= 3;
-        iSoft = 3;
-    }
+    totalSoft = 0;
+    totalSoft += 5.9;
 
-    subtotalBebida.innerHTML = totalBebida.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    imprimirBebida();
 
 });
 
 
 // funcao principal
 
-bebidaBtn?.addEventListener('click', function(e) {
+btnBebida?.addEventListener('click', function(e) {
     e.preventDefault();
 
     // puxando valores quando o botao é clicado
 
     // selects
+
     let softEscolhida = soft.options[soft.selectedIndex].text;
     let alcoolicaEscolhida = alcoolica.options[alcoolica.selectedIndex];
 
@@ -867,4 +878,3 @@ function imprimirConfirma() {
     if (confirmaTamanhoDoce == 'NENHUMA') {
         blocoConfirmaDoce.style.display = 'none';
     }
-}
