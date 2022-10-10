@@ -11,109 +11,66 @@ body {
     color: #f2f2f2;
 }
 
-header {
-    width: 100%;
-    text-align: center;
-    padding-top: 30px;
-    position: asbolute;
-    background-color: #070024;
+@media (max-width: 480px) {
+    header {
+        padding-top: 4vh;
+        width: 100%;
+    }
+
+    nav {
+        width: 100vw;
+        height: 10vh;
+        display: grid;
+        grid-template-areas: 
+            "a a"
+            "b c";
+        grid-template-columns: 50%;
+    }
+    
+    nav a {
+        color: white;
+    }
+
+    #cardapio-header {
+        grid-area: b;
+    }
+
+    .logo {
+        grid-area: a;
+        display: inline;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 17rem;
+    }
+
+    .nav-btn {
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+    }
+
+    #pedido-header {
+        grid-area: c;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    #main-landing {
+        display: flex;
+        flex-wrap: wrap ;
+    }
+
+    .detalhe {
+        width: 50vw;
+    }
 }
 
-header a {
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 40px;
-    text-decoration: none;
-    font-size: 250%;
-}
-
-#cardapio-header {
-    margin-top: 1.5%;
-    position: absolute;
-    left: 0pt;
-    top: 0pt;
-}
-
-#pedido-header {
-    margin-top: 1.5%;
-    position: absolute;
-    right: 0pt;
-    top: 0pt;
-}
-
-.logo {
-    display: inline;
-    margin: 0 0;
-    padding: 0;
-}
-
-.logo img {
-    width: 35%;
-}
-
-/* landing page */
-
-.content {
-    display: flex;
-}
-
-#main-landing {
-    margin-top: 10%;
-    width: 74%;
-    padding: 0 5%;
-}
-
-.title {
-    font-size: 312.5%;
-    width: 800px;
-    text-align: center;
-}
-
-.btn-container {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin-top: 32px;
-    margin-left: 22%; 
-}
-
-.btn {
-    width: 295px;
-    padding: 1%;
-    font-family: 'Source Sans Pro';
-    font-weight: 600;
-    border: 3px solid;
-    border-radius: 5px;
-    font-size: 250%;
-    text-decoration: none;
-}
-
-#cardapio-btn {
-    background-color: #ffdf00;
-    margin-right: 50%;
-    color: #000;
-    border-color: #ffa500;
-}
-
-#pedido-btn {
-    margin-top: 2%;
-    background-color: #e12c2c;
-    border-color: #a70b0b;
-    color: #f2f2f2;
-}
-
-#aside-landing {
-    position: fixed;
-    right: 0pt;
-    bottom: 0pt;
-    width: 288px;
-    padding: 40px;
-}
-
-.detalhe {
-    width: 280px;
-    float: right;
-}
 
 /* cardapio */
 
