@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
+    <link rel="icon" type="image/x-icon" href="/img/pizza.ico">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
     <link rel="stylesheet" href="style.css">
     <title>PizzaByte | Cardápio</title>
-    <link rel="icon" type="image/x-icon" href="/img/pizza.ico">
 </head>
 <body>
     <header>
@@ -24,64 +26,79 @@
         <div class="cardapio-container">
             <div id="destaque">
                 <h2 class="secao-titulo">em destaque:</h2>
-                <div id="destaque-container">
-                    <div class="sabor-destaque" id="chef">
+                <section class="center slider">
+                    <div class="sabor-destaque" id="chef" style="width:200px">
                         <img src="https://www.aovivodebrasilia.com.br/wp-content/uploads/2020/09/pizza.jpg" alt="" class="img">
                         <h3>do chef</h3>
                     </div>
-                    <div class="sabor-destaque" id="calabresa">
+                    <div class="sabor-destaque" id="calabresa" style="width: 200px">
                         <img src="https://cdn.minhareceita.com.br/2022/01/pizza-gourmet-de-pepperoni.jpg" alt="" class="img">
                         <h3>calabresa</h3>
                     </div>
-                    <div class="sabor-destaque" id="alcatra">
+                    <div class="sabor-destaque" id="alcatra" style="width: 200px">
                         <img src="https://eventos.conexaogtecnologia.com.br/wp-content/uploads/2020/05/Ativo-3-80.jpg" alt="" class="img">
                         <h3>alcatra</h3>
                     </div>
-                </div>
+                </section>
             </div>
-            <div id="salgadas">
-                <h2 class="secao-titulo">salgadas:</h2>
-                <div class="opcoes-container" id="salgadas-container">
-                    <p class="sabor">marguerita</p>
-                    <p class="sabor">portuguesa</p>
-                    <p class="sabor">strogonoff</p>
-                    <p class="sabor">do chef</p>
-                    <p class="sabor">calabresa</p>
-                    <p class="sabor">alcatra</p>
-                    <p class="sabor">pepperoni</p>
-                    <p class="sabor">bacon</p>
-                    <p class="sabor">mussarela</p>
-                    <p class="sabor">4 queijos</p>
-                    <p class="sabor">milho</p>
-                    <p class="sabor">doritos</p>
+                      <div id="salgadas">
+                        <h2 class="secao-titulo">salgadas:</h2>
+                        <div class="opcoes-container" id="salgadas-container">
+                            <p class="sabor">marguerita</p>
+                            <p class="sabor">portuguesa</p>
+                            <p class="sabor">strogonoff</p>
+                            <p class="sabor">do chef</p>
+                            <p class="sabor">calabresa</p>
+                            <p class="sabor">alcatra</p>
+                            <p class="sabor">pepperoni</p>
+                            <p class="sabor">bacon</p>
+                            <p class="sabor">mussarela</p>
+                            <p class="sabor">4 queijos</p>
+                            <p class="sabor">milho</p>
+                            <p class="sabor">doritos</p>
+                        </div>
+                    </div>
+                    <div id="doces">
+                        <h2 class="secao-titulo">doces:</h2>
+                        <div class="opcoes-container" id="doces-container">
+                            <p class="sabor">chocolate preto</p>
+                            <p class="sabor">chocolate branco</p>
+                            <p class="sabor">dois amores</p>
+                            <p class="sabor">café com leite</p>
+                            <p class="sabor">sensação</p>
+                            <p class="sabor">banana nevada</p>
+                        </div>
+                    </div>
+                    <div id="bebidas">
+                        <h2 class="secao-titulo">bebidas:</h2>
+                        <div class="opcoes-container"  id="bebidas-container">
+                            <p class="sabor">pepsi</p>
+                            <p class="sabor">pepsi zero</p>
+                            <p class="sabor">guaraná</p>
+                            <p class="sabor">fanta laranja</p>
+                            <p class="sabor">água sem gás</p>
+                            <p class="sabor">água com gás</p>
+                            <p class="sabor">cerveja</p>
+                            <p class="sabor">skol beats</p>
+                            <p class="sabor">smirnoff ice</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div id="doces">
-                <h2 class="secao-titulo">doces:</h2>
-                <div class="opcoes-container" id="doces-container">
-                    <p class="sabor">chocolate preto</p>
-                    <p class="sabor">chocolate branco</p>
-                    <p class="sabor">dois amores</p>
-                    <p class="sabor">café com leite</p>
-                    <p class="sabor">sensação</p>
-                    <p class="sabor">banana nevada</p>
-                </div>
-            </div>
-            <div id="bebidas">
-                <h2 class="secao-titulo">bebidas:</h2>
-                <div class="opcoes-container"  id="bebidas-container">
-                    <p class="sabor">pepsi</p>
-                    <p class="sabor">pepsi zero</p>
-                    <p class="sabor">guaraná</p>
-                    <p class="sabor">fanta laranja</p>
-                    <p class="sabor">água sem gás</p>
-                    <p class="sabor">água com gás</p>
-                    <p class="sabor">cerveja</p>
-                    <p class="sabor">skol beats</p>
-                    <p class="sabor">smirnoff ice</p>
-                </div>
-            </div>
-        </div>
     </main>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).on('ready', function() {
+        $(".center").slick({
+          autoplay: true,
+          autoplaySpeed: 2200,
+          arrows: false,
+          infinite: true,
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll: 3
+        });
+      });
+  </script>
 </body>
 </html>
