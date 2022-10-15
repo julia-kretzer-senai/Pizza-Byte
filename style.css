@@ -25,6 +25,7 @@ body {
     background-color: #070024;
     font-family: 'Anaheim';
     color: #f2f2f2;
+    overflow-x: hidden;
 }
 
 @media (min-width: 0px) and (max-width: 850px) {
@@ -227,16 +228,11 @@ body {
         color: #f2f2f2;
     }
 
-    #aside-landing {
-        width: 90vw;
-        position: fixed;
-        text-align: end;
-        bottom: 0;
-        padding: 2vh 5vw;
-    }
-
     .detalhe {
-        width: 55vw;    
+        width: 55vw;  
+        bottom: 2.5vh;
+        right: 5vw;
+        position: absolute;  
     }
 
 }
@@ -333,13 +329,12 @@ body {
         width: 100vw;
         text-align: center;
         font-size: 4rem;
-        margin-top: 2%;
+        margin: 2vh 2vw;
         font-family: 'Source Sans Pro';
         font-weight: 600;
     }
     
     #destaque {
-        margin-top: 40px;
         width: 100vw;
     }
     
@@ -374,7 +369,7 @@ body {
     }
     
     .img {
-        width: 50%;
+        width: 80%;
         aspect-ratio: 5/3;
         border: white dashed 2px;
         margin: 16px 25% 16px 25%;
@@ -432,9 +427,11 @@ body {
 }
 
 @media (max-width: 415px) {
+    
     .cardapio-title {
         font-size: 3rem;
         margin-top: 4vh;
+        margin-bottom: 0;
     }
 
     .sabor-destaque h3 {
@@ -445,19 +442,30 @@ body {
         margin: 5% auto;
     }
 
+    #destaque {
+        display: flex;
+        flex-direction: column;
+        height: 37vh;
+    }
+    
     #destaque section {
-        margin-left: 5%;
+        margin: 0 1vw;
+        width: 100%;
     }
 
     .secao-titulo {
         text-align: center;
         padding: 0;
+        width: 100vw;
+        margin-bottom: 2vh;
     }
 
     .opcoes-container {
-        width: 90%;
+        width: 90vw;
+        margin: 5vw;
     }
 }
+
 
 @media (min-width: 500px) {
     .cardapio-title {
@@ -470,10 +478,9 @@ body {
     }
 } 
 
-@media (max-width: 850px) {
+@media (min-width: 500px) and (max-width: 850px) {
     .cardapio-title {
-        font-size: 3rem;
-        margin-top: 5vh;
+        font-size: 5rem;
     }
     
     #destaque {
@@ -481,6 +488,7 @@ body {
         display: flex;
         flex-direction: column;
         width: 100vw;
+        height: 60vh;
         margin-top: 0;
         margin-right: 0;
     }
@@ -496,7 +504,7 @@ body {
     }
 
     .sabor-destaque {
-        height: 30%;
+        height: 67vw;
     }
 
     .img {
@@ -507,10 +515,17 @@ body {
 
     .opcoes-container {
         width: 80%;
-        margin-left: 5%;
+        margin-left: 7.5%;
         margin-right: 0;
     }
 
+}
+
+@media (min-width: 851px) {
+    .img {
+        width: 30vw;
+        margin-left: 15vw;
+    }
 }
 
 
