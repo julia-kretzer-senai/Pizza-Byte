@@ -403,6 +403,7 @@ body {
     
     #salgadas-container {
         background-color: #ffa500;
+        color: #070024;
     }
     
     #doces-container {
@@ -532,43 +533,8 @@ body {
     
     .img {
         width: 30vw;
-        margin-left: 15vw;
+        margin-left: 16vw;
     }
-}
-
-
-/* dados */
-
-#main-dados {
-    padding-top: 10%;
-    color: black;
-    width: 50%;
-    aspect-ratio: 2/1;
-    background-color: #ffdf00;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#main-dados h2 {
-    font-family: 'Source Sans Pro';
-    font-weight: 600;
-    font-size: 250%;
-    width: 100%;
-    height: 10%;
-    margin: 2% 0 5% 0;
-    text-align: center;
-}
-
-.labels {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    text-align: end;
-}
-
-.inputs {
-    width: 50%;
 }
 
 /* salgada e doce */
@@ -662,6 +628,12 @@ body {
     margin: 17.5% 0;
 }
 
+.subtotal p {
+    margin-left: 5%;
+    font-size: 150%;
+    font-weight: 600;
+}
+
 .btn-pedido {
     border-radius: 5px;
     text-decoration: none;
@@ -671,10 +643,51 @@ body {
     width: 40%;
 }
 
-.subtotal p {
-    margin-left: 5%;
-    font-size: 150%;
-    font-weight: 600;
+@media (max-width: 480px) {
+
+    .title-pedido {
+        margin-top: 2vh;
+    }
+
+    .pedido-bg {
+        width: 80vw;
+        padding: 2.5vh 5vw;
+        margin: 3vh 5vw 15vh;
+    }
+
+    .opcoes {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .coluna1, .coluna2, .coluna3 {
+        width: 100%;
+        align-items: center;
+        height: 78vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .coluna1 {
+        height: 60vw;
+    }
+
+    .coluna3 {
+        height: 40vw;
+    }
+
+    .opcoes h3 {
+        margin-top: 2vh;
+    }
+
+    .subtotal {
+        margin: 2vh 0;
+    }
+
+    .subtotal h3 {
+        margin-top: 0;
+    }
+
 }
 
 /* salgada */
@@ -688,6 +701,12 @@ body {
     background-color:#e12c2c;
     border: solid 3px #a70b0b;
     color: white;
+}
+
+@media (max-width: 480px) {
+    #salgada-continuar {
+        margin: 0;
+    }
 }
 
 /* doce */
@@ -705,7 +724,6 @@ body {
 }
 
 #doce-voltar {
-    margin: 0 5% 0 15%;
     background-color: #ffa500;
     border: solid 3px #ffa500;
     color: #070024;
@@ -715,6 +733,30 @@ body {
     background-color: #ffdf00;
     border: solid 3px #ffa500;
     color: #070024;
+}
+
+@media (max-width: 480px) {
+    #pedido-doce {
+        height: 95vh;
+    }
+
+    #btn-pedido-container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #doce-voltar {
+        left: 27vw;
+        width: 30vw;
+        position: absolute;
+        float: left;
+    }
+
+    #doce-continuar {
+        bottom: -22vh;
+        left: 22vw;
+        position: absolute;
+    }
 }
 
 /* bebida */
@@ -835,6 +877,68 @@ body {
     background-color: #ffdf00;
     color: #070024;
 }
+
+@media (max-width: 480px) {
+    #pedido-bebida {
+        padding-top: 2vh;
+        /* height: 100vh; */
+    }
+   
+    .title-pedido {
+        margin-bottom: 3vh;
+    }
+
+    #conteudo-bebida h3 {
+        margin: 3vh 0 1vh 0;
+    }
+
+    .soft, .alcoolica {
+        width: 100%;
+        height: 33%;
+    }
+    
+    .selecoes-bebida {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+
+    .selecoes-bebida select{
+        width: 83vw;
+    }
+
+    .selecoes-bebida input {
+        margin: 2vh 2vw;
+    }
+
+    .selecoes-bebida label {
+        width: 90%;
+        margin-left: 1vw;
+    }
+
+    .subtotal-bebida-container {
+        padding: 0;
+        width: 50vw;
+        /* justify-content: center; */
+        margin-left: 10vw;
+    }
+
+    .subtotal-bebida {
+        padding: 0;
+        width: 50%;
+    }
+
+    #bebida-subtotal {
+        margin-top: 3vh;
+    }
+
+    .btn-bebida {
+        position: absolute;
+    }
+
+}
+
 
 /* dados */
 
