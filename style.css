@@ -194,6 +194,7 @@ body {
 
     #main-landing h1 {
         margin-top: 8vh;
+        padding: 2%;
     }
 
     .btn-container {
@@ -207,6 +208,8 @@ body {
 
     .btn {
         width: 50vw;
+        font-size: 2rem;
+        height: 4.5vh;
         padding: 2vh 5vw;
         font-family: 'Source Sans Pro';
         font-weight: 600;
@@ -445,10 +448,10 @@ body {
     #destaque {
         display: flex;
         flex-direction: column;
-        height: 37vh;
+        height: 75vw;
     }
     
-    #destaque section {
+    #destaque section { 
         margin: 0 1vw;
         width: 100%;
     }
