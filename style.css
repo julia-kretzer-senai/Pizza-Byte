@@ -246,7 +246,7 @@ body {
     }
     
     #main-landing {
-        margin-top: 10%;
+        margin-top: 7.5%;
         width: 90vw;
         padding: 0 5vw;
     }
@@ -525,6 +525,11 @@ body {
 }
 
 @media (min-width: 851px) {
+    .cardapio-title {
+        font-size: 4rem;
+        margin: 2% 0;
+    }
+    
     .img {
         width: 30vw;
         margin-left: 15vw;
